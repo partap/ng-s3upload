@@ -92,6 +92,7 @@ angular.module('ngS3upload.services', []).
           self.uploads--;
           scope.uploading = false;
           scope.success = false;
+          scope.attempt = false;
           deferred.reject(xhr);
           scope.$emit('s3upload:abort', xhr);
         });
